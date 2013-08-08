@@ -5,9 +5,6 @@ ruby '2.0.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
-
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
@@ -40,6 +37,12 @@ gem 'simple_form', '>= 3.0.0.rc'
 group :development do
 	gem 'better_errors'
 	gem 'quiet_assets'
+	gem 'sqlite3'
+end
+group :production do
+	gem 'pg'
+	gem 'rails_on_heroku'
+	gem 'thin'
 end
 
 # Use ActiveModel has_secure_password
